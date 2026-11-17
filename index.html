@@ -220,7 +220,6 @@ input:focus,textarea:focus{border-color:var(--acc)}
         <div class="pro-glow"></div>
         <div class="pro-badge">👑 PRO</div>
         <b class="pro-title">Ads Hatayein</b>
-        <div class="muted">Upgrade to Pro: banner hatao, aur saare premium tools kholo.</div>
         <button class="btn-gold" id="openPaywall">Ads Hatayein (Upgrade to Pro)</button>
       </div>
       <div class="card">
@@ -228,7 +227,6 @@ input:focus,textarea:focus{border-color:var(--acc)}
         <div class="muted" style="margin:6px 0 12px" id="libInfo"></div>
         <button class="btn btn2" id="clearLib" style="border-color:#EF4444;color:#EF4444">Saara library hatayein</button>
       </div>
-      <p class="muted" style="text-align:center">100% Private Offline Music. Aapka music sirf aapke phone mein rehta hai: koi server nahi, koi upload nahi, internet ki zarurat nahi.</p>
     </section>
   </div>
 
@@ -239,7 +237,7 @@ input:focus,textarea:focus{border-color:var(--acc)}
     <button id="mNext" aria-label="Next">⏭</button>
   </div>
   <!-- AdMob banner: native APK build mein yahan lagta hai. Pro hone par ye hide ho jata hai. -->
-  <div class="banner" id="banner"><span>Non-intrusive banner ad (sirf native app mein dikhega)</span><button class="x" id="bannerX" aria-label="Band">✕</button></div>
+  <div class="banner" id="banner"><span>Ad</span><button class="x" id="bannerX" aria-label="Band">✕</button></div>
   <nav class="nav">
     <button class="on" data-go="play"><span class="ico">🎵</span>Player</button>
     <button data-go="eq"><span class="ico">🎚️</span>EQ</button>
@@ -260,10 +258,9 @@ input:focus,textarea:focus{border-color:var(--acc)}
   <div class="pw-glow"></div>
   <div class="pw-crown">👑</div>
   <b class="pw-title">Royal Pro</b>
-  <div class="muted">Banner hatao, EQ aur ringtone cutter ke saare tools paao.</div>
   <div class="plans">
-    <div class="plan"><span class="muted">Weekly</span><b class="gold-txt">₹49</b><span class="muted">/ hafta</span></div>
-    <div class="plan best"><span class="gold-txt small">BEST VALUE</span><span class="muted">Lifetime</span><b class="gold-txt">₹99</b><span class="muted">ek baar</span></div>
+    <div class="plan"><span class="muted">Weekly</span><b class="gold-txt">₹49</b><span class="muted">Ads ke saath</span></div>
+    <div class="plan best"><span class="muted">Lifetime</span><b class="gold-txt">₹99</b><span class="muted">Unlimited, bina ads</span></div>
   </div>
   <button class="btn-gold" id="unlockAll" disabled title="Billing connect hone ke baad active hoga">UNLOCK ALL</button>
   <button class="btn-ghost" data-close="mPaywall">Baad mein</button>
@@ -695,7 +692,7 @@ function setTheme(t){
 $$('[data-theme-pick]').forEach(c=>c.onclick=()=>{setTheme(c.dataset.themePick);toast('Theme badal gayi')});
 function renderSettingsInfo(){
   const folders=new Set(tracks.map(t=>t.folder)).size;
-  $('#libInfo').textContent=`${tracks.length} gaane · ${folders} folders. Gaane aapke phone mein hi hain, koi upload nahi hota.`;
+  $('#libInfo').textContent=`${tracks.length} gaane · ${folders} folders. `;
 }
 $('#clearLib').onclick=async()=>{
   if(!confirm('Saara library hata dein? Phone ki files nahi hategi, sirf app ki list.'))return;
