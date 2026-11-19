@@ -1,0 +1,6 @@
+{
+  "name": "Royal Offline Music Player",
+  "description": "A high-performance offline MP3 and audio music player with 10-band bass equalizer, ringtone cutter, sleep timer, lyrics sync, and customizable themes.",
+  "requestPermissions": [],
+  "capabilities": []
+}

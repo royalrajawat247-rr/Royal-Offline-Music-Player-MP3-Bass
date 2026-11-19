@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "echo 'No build step required'",
+    "lint": "echo 'No lint required'"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
